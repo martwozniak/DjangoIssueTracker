@@ -1,4 +1,8 @@
 # Django Issue Tracker
+<p align="center">
+  <img src="https://raw.githubusercontent.com/martwozniak/DjangoIssueTracker/master/logo.png" alt="Issue Tracker"/>
+</p>
+
 This is a web application written in Python (Django). It allows you to manage issues. 
 
 ## Requirements
