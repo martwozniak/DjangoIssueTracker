@@ -56,6 +56,8 @@ python3 manage.py runserver
 ## Tasks
 
 ## Issues
+### ❗ SECRET_KEY
+I know about the application key problem! In a production application, you must not leave SECRET_KEY as it is in this project. You need to create a file that stores the SECRET_KEY and call that file from settings.py. 
 
 ## Footer
 
