@@ -11,6 +11,7 @@ Dillinger uses a number of open source projects to work properly:
 
 - [Python](https://www.python.org/downloads/) - Python 3.8.6
 - [Django](https://www.djangoproject.com/) - Django 3.1.7
+- [Node.js](https://nodejs.org/en/) - Node v12.18.2
 
 ## Installation
 
@@ -36,6 +37,24 @@ Install all dependencies
 ```
 pip install -r requirements.txt  
 ```
+[Download and Install Node.js](https://nodejs.org/en/)  
+After that move to `/frontend` directory  
+```
+cd frontend
+```
+Install all dependicies
+```
+npm i
+```
+Compile frontend
+```
+npm run build
+```
+Move to main directory
+```
+cd ..
+```
+
 Run django server
 ```
 python3 manage.py runserver  
@@ -48,6 +67,10 @@ cd DjangoIssueTracker
 virtualenv env  
 source env/bin/activate  
 pip install -r requirements.txt  
+cd frontend
+npm i  
+npm run build
+cd ..
 python3 manage.py runserver  
 
 ```
