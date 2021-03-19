@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # issue tracker
     'issuetracker.apps.IssuetrackerConfig',
+    'frontend.apps.FrontendConfig',
 ]
 
 MIDDLEWARE = [
