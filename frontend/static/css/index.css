@@ -1,0 +1,14 @@
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(156, 221, 221);
+}
+#main {
+    width: 100%;
+    height: 100%;
+}
+#app {
+
+}

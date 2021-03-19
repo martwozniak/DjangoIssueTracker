@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     # issue tracker
     'issuetracker.apps.IssuetrackerConfig',
     'frontend.apps.FrontendConfig',
+    'api.apps.ApiConfig',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
