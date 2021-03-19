@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 import ContactPage from './ContactPage';
+import HomeView from './HomeView';
 
 export default class HomePage extends Component {
     constructor(props){
@@ -10,7 +11,7 @@ export default class HomePage extends Component {
     render() {
         return <Router>
             <Switch>
-                <Route exact path="/"><p>This is the home page</p></Route>
+                <Route path="/" component={HomeView}></Route>
                 <Route path="/contact" component={ContactPage}></Route>
             </Switch>
         </Router>;

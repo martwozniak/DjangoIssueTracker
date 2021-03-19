@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import {MDCTopAppBar} from '@material/top-app-bar';
 
 export default class AppBar extends Component {
     constructor(props){
         super(props);
     }
-    
+
     render() {
-        return <strong>This is AppBar</strong>;
+        return 'Header';
     }
 }
