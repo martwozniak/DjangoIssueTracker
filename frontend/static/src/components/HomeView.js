@@ -27,7 +27,17 @@ export default class HomeView extends Component {
         });
     }
     loginUser() {
-        console.log(this.state);
+        const requestOptions = {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                login: this.state.login,
+                password: this.state.password,
+            })
+        };
+        fetch("/api/login", requestOptions)
+        .then((response)=> response.json())
+        .then((data) => console.log(data));
     }
     
     render() {
