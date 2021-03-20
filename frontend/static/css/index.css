@@ -1,49 +1,75 @@
 html, body {
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100%;
-    height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  height: 100%;
 }
+
 #main {
-    width: 100%;
-    height: 100%;
-}
-#app {
-    
+  width: 100%;
+  height: 100%;
 }
 
 /* Login Page */
 .center-app-box {
-    display: flex;
-    align-items: center;
-    justify-content: center
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .main-app-box {
-    display: flex;
-    flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 /* Header || AppBar || Nabigation Bar */
 .navigation-bar {
-    width: 100%;
-    height: 45px;
-    background-color: white;
+  width: 100%;
+  height: 45px;
+  background-color: white;
 }
+
 .main-navigation-flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+  height: 50px;
 }
+
 .navigation-bar .left-side-item .author {
-    font-style: italic;
-    font-size: 9px;
+  font-style: italic;
+  font-size: 9px;
 }
+
 .right-side-menu ul {
-    list-style-type:none;
-    display: flex;
-    justify-content: space-between;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 .right-side-menu a {
-    margin-left: 10px;
+  margin-left: 10px;
 }
+/*# sourceMappingURL=index.css.map */
