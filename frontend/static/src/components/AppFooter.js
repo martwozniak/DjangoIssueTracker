@@ -6,6 +6,11 @@ export default class AppFooter extends Component {
     }
     
     render() {
-        return <strong>This is AppFooter</strong>;
+        return <div class="mt-4 p-2">
+            <div class="container">
+            <strong>This is Django Issue Tracker App made by Mart Wozniak</strong>
+            <p>This project using: Django, Node, Bootstrap, webpack</p>
+            </div>
+        </div>;
     }
 }
