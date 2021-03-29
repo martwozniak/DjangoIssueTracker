@@ -82,6 +82,17 @@ python3 manage.py runserver
 ### ❗ SECRET_KEY
 I know about the application key problem! In a production application, you must not leave SECRET_KEY as it is in this project. You need to create a file that stores the SECRET_KEY and call that file from settings.py. 
 
+## Mobile App with React Native
+This project use React Native.  
+
+```
+cd mobile
+```
+First run
+```
+npx react-native run-android
+```
+
 ## Footer
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
