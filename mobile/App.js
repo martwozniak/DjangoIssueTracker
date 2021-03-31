@@ -21,11 +21,16 @@ import {
 import {
   Colors,
   DebugInstructions,
-  Header,
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { Button, ThemeProvider, Header } from 'react-native-elements';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -52,17 +57,37 @@ const Section = ({children, title}): Node => {
     </View>
   );
 };
+function SettingsScreen() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Settings!</Text>
+    </View>
+  );
+}
+function HomeScreen() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Home!</Text>
+    </View>
+  );
+}
 
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
+  const Tab = createMaterialBottomTabNavigator();
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaProvider style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <Header
+        leftComponent={{ icon: 'menu', color: '#fff' }}
+        centerComponent={{ text: 'Django Issue Tracker', style: { color: '#fff' } }}
+        rightComponent={{ icon: 'home', color: '#fff' }}
+      />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
@@ -80,10 +105,42 @@ const App: () => Node = () => {
           <Section title="Issues?">
             E-mail: <Text style={styles.highlight}>hello@marcin-wozniak.pl</Text> 
           </Section>
-         
+          <Section title="">
+
+          </Section>
+          
         </View>
+
       </ScrollView>
-    </SafeAreaView>
+      <NavigationContainer>
+      <Tab.Navigator
+        screenOptions={({ route }) => ({
+          tabBarIcon: ({ focused, color, size }) => {
+            let iconName;
+            size = 20;
+            if (route.name === 'Home') {
+              iconName = focused
+                ? 'home'
+                : 'home';
+            } else if (route.name === 'Settings') {
+              iconName = focused ? 'cogs' : 'cogs';
+            }
+
+            // You can return any component that you like here!
+            return <Icon name={iconName} size={size} color={color} />;
+          },
+        })}
+        tabBarOptions={{
+          activeTintColor: 'white',
+          inactiveTintColor: 'gray',
+        }}
+      >
+        <Tab.Screen name="Home" component={HomeScreen} />
+          
+        <Tab.Screen name="Settings" component={SettingsScreen} />
+      </Tab.Navigator>
+    </NavigationContainer>
+    </SafeAreaProvider>
   );
 };
 
