@@ -26,6 +26,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
@@ -65,25 +66,21 @@ const App: () => Node = () => {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <Header />
+        
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
+          <Section title="Introduction">
+            This app consume <Text style={styles.highlight}>Django Issue Tracker API</Text>.
           </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
+          <Section title="How to use">
+            Use buttons below to switch views
           </Section>
-          <Section title="Debug">
-            <DebugInstructions />
+          <Section title="Issues?">
+            E-mail: <Text style={styles.highlight}>hello@marcin-wozniak.pl</Text> 
           </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+         
         </View>
       </ScrollView>
     </SafeAreaView>
