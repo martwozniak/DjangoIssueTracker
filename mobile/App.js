@@ -86,7 +86,7 @@ const App: () => Node = () => {
       <Header
         leftComponent={{ icon: 'menu', color: '#fff' }}
         centerComponent={{ text: 'Django Issue Tracker', style: { color: '#fff' } }}
-        rightComponent={{ icon: 'home', color: '#fff' }}
+        rightComponent={{ icon: 'people-outline', color: '#fff' }}
       />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
