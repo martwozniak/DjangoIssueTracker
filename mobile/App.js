@@ -72,6 +72,14 @@ function HomeScreen() {
   );
 }
 
+function IssuesScreen() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Issues!</Text>
+    </View>
+  );
+}
+
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
   const Tab = createMaterialBottomTabNavigator();
@@ -124,6 +132,8 @@ const App: () => Node = () => {
                 : 'home';
             } else if (route.name === 'Settings') {
               iconName = focused ? 'cogs' : 'cogs';
+            } else if (route.name === 'Issues'){
+              iconName = focused ? 'bug' : 'bug';
             }
 
             // You can return any component that you like here!
@@ -136,7 +146,7 @@ const App: () => Node = () => {
         }}
       >
         <Tab.Screen name="Home" component={HomeScreen} />
-          
+        <Tab.Screen name="Issues" component={IssuesScreen} />
         <Tab.Screen name="Settings" component={SettingsScreen} />
       </Tab.Navigator>
     </NavigationContainer>
